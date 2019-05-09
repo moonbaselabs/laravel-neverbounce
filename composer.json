@@ -1,5 +1,5 @@
 {
-  "name": "moonbaselabs/neverbounce-laravel-wrapper",
+  "name": "moonbaselabs/neverbounce-laravel",
   "description": "A laravel wrapper for the NeverBounceAPI-PHP.",
   "keywords": [
     "laravel",
@@ -14,20 +14,20 @@
       "email": "nic@moonbaselabs.com"
     }
   ],
-  "minimum-stability": "dev",
+  "minimum-stability": "dev-master",
   "require": {
     "illuminate/support": "5.*",
     "neverbounce/neverbounce-php": "~4.1.0"
   },
   "autoload": {
     "psr-4": {
-      "MoonbaseLabs\\NeverBounceWrapper\\": "src/"
+      "MoonbaseLabs\\NeverBounce\\": "src/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "MoonbaseLabs\\NeverBounceWrapper\\NeverBounceWrapperServiceProvider"
+        "MoonbaseLabs\\NeverBounce\\NeverBounceServiceProvider"
       ]
     }
   }

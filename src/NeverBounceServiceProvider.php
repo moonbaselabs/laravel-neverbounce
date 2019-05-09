@@ -1,10 +1,10 @@
 <?php
 
-namespace MoonbaseLabs\NeverBounceWrapper;
+namespace MoonbaseLabs\NeverBounce;
 
 use Illuminate\Support\ServiceProvider;
 
-class NeverBounceWrapperServiceProvider extends ServiceProvider
+class NeverBounceServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap services.
