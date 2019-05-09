@@ -1,5 +1,5 @@
 {
-  "name": "moonbaselabs/neverbounce-laravel",
+  "name": "moonbaselabs/laravel-neverbounce",
   "description": "A laravel wrapper for the NeverBounceAPI-PHP.",
   "keywords": [
     "laravel",
