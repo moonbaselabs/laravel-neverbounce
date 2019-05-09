@@ -1,0 +1,34 @@
+{
+  "name": "moonbaselabs/neverbounce-laravel-wrapper",
+  "description": "A laravel wrapper for the NeverBounceAPI-PHP.",
+  "keywords": [
+    "laravel",
+    "neverbounce",
+    "email",
+    "verification"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Nic Wentling",
+      "email": "nic@moonbaselabs.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "illuminate/support": "5.*",
+    "neverbounce/neverbounce-php": "~4.1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "MoonbaseLabs\\NeverBounceWrapper\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "MoonbaseLabs\\NeverBounceWrapper\\NeverBounceWrapperServiceProvider"
+      ]
+    }
+  }
+}
