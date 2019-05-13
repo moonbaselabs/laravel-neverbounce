@@ -31,7 +31,7 @@ Add translation to `resources/lang/en/validation.php`
 ## Usage
 
 ```php
-    $emailInput = $request->validate([
-        'email' => 'required|email|neverbounce',
-    ]);
+$emailInput = $request->validate([
+    'email' => 'required|email|neverbounce',
+]);
 ```
