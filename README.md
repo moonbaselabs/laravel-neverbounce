@@ -11,15 +11,15 @@ composer require moonbaselabs/laravel-neverbounce
 Add API key to `configs/services.php` (See [Obtaining an API Key](#obtaining-an-api-key) below):
 
 ```php
-    'neverbounce' => [
-        'api_key' => env('NEVERBOUNCE_API_KEY'),
-    ],
+'neverbounce' => [
+    'api_key' => env('NEVERBOUNCE_API_KEY'),
+],
 ```
 
 Add translation to `resources/lang/en/validation.php`
 
 ```php
-    'neverbounce' => 'The :attribute is not valid. :suggestion :error',
+'neverbounce' => 'The :attribute is not valid. :suggestion :error',
 ```
 
 ### Obtaining an API key
