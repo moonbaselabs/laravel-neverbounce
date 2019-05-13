@@ -19,9 +19,9 @@ composer require moonbaselabs/laravel-neverbounce
 Add configuration values to `configs/services.php`:
 
 ```php
-'neverbounce' => [
-    'api_key' => env('NEVERBOUNCE_API_KEY'),
-],
+    'neverbounce' => [
+        'api_key' => env('NEVERBOUNCE_API_KEY'),
+    ],
 ```
 
 **Obtain Neverbounce API Key:**
@@ -39,7 +39,7 @@ NEVERBOUNCE_API_KEY=private_key
 Add translation to `resources/lang/en/validation.php`
 
 ```php
-'neverbounce' => 'The :attribute is not valid. :suggestion :error',
+    'neverbounce' => 'The :attribute is not valid. :suggestion :error',
 ```
 
 ---
@@ -47,7 +47,7 @@ Add translation to `resources/lang/en/validation.php`
 ## Useage
 
 ```php
-$emailInput = $request->validate([
-    'email' => 'required|email|neverbounce',
-]);
+    $emailInput = $request->validate([
+        'email' => 'required|email|neverbounce',
+    ]);
 ```
