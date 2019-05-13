@@ -1,18 +1,53 @@
 # laravel-neverbounce
 
-A laravel wrapper for the NeverBounceAPI-PHP.
+A laravel wrapper for the [NeverBounceAPI-PHP](https://github.com/NeverBounce/NeverBounceAPI-PHP).
 
-Allows up to 1,000 email verifications per month.
+Extends Laravel Validator to check a single email address against the NeverBounce API.
 
-https://developers.neverbounce.com/docs
-https://github.com/NeverBounce/NeverBounceAPI-PHP
+The Neverbounce API allows up to [1,000 free email verifications](https://neverbounce.com/help/getting-started/how-do-the-1000-free-credits-work) per month.
 
-Update Config:
+---
 
-Supported Scenario:
+## Installation
 
-- Verifying a single email address before saving it to the database.
+Within your Terminal:
 
-Future Work:
+```bash
+composer require moonbaselabs/laravel-neverbounce
+```
 
-- Expanding the wrapper to include bulk email verification to take full advantage of the NeverBounce API.
+Add configuration values to `configs/services.php`:
+
+```php
+'neverbounce' => [
+    'api_key' => env('NEVERBOUNCE_API_KEY'),
+],
+```
+
+**Obtain Neverbounce API Key:**
+
+1. [Register]("https://app.neverbounce.com/register") for a Neverbounce Account.
+2. Create a new App.
+3. Copy secret API Key. (Note: Make sure it is a v4 api key. It will start with `private_***`).
+
+Add Neverbounce API Key to `.env`:
+
+```php
+NEVERBOUNCE_API_KEY=private_key
+```
+
+Add translation to `resources/lang/en/validation.php`
+
+```php
+'neverbounce' => 'The :attribute is not valid. :suggestion :error',
+```
+
+---
+
+## Useage
+
+```php
+$emailInput = $request->validate([
+    'email' => 'required|email|neverbounce',
+]);
+```
