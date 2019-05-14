@@ -14,7 +14,7 @@
       "email": "nic@moonbaselabs.com"
     }
   ],
-  "minimum-stability": "dev-master",
+  "minimum-stability": "stable",
   "require": {
     "illuminate/support": "5.*",
     "neverbounce/neverbounce-php": "~4.1.0"
